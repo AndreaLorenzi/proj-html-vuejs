@@ -2,7 +2,11 @@
   <header>
     <div class="conteiner d-flex">
       <div class="logo">
-        <img src="../assets/images/avada-restaurant-logo-new-2x.png" alt="" />
+        <img
+          src="src/assets/images/logo-restaurant-2x.png"
+          alt=""
+          style="height: 60px"
+        />
         <div class="text">
           <h3>THE BEST TABLE IN TOWN</h3>
           <h1>FINE DINING EXPERIENCE</h1>
@@ -60,7 +64,7 @@ export default {
 @import "../styles/_variables.scss";
 .conteiner {
   background-color: $first-color;
-  height: 500px;
+  height: 700px;
   .logo {
     width: 40%;
   }
@@ -77,21 +81,32 @@ export default {
 .text {
   margin: auto;
   width: 60%;
-  padding-top: 3rem;
-  text-align: center;
+  padding-top: 7rem;
+
   h3 {
     color: grey;
+    font-size: 20px;
+    padding-bottom: 1.5rem;
   }
   h1 {
     color: white;
+    padding-bottom: 1.5rem;
   }
   p {
     color: grey;
+    padding-bottom: 1.5rem;
+  }
+  button {
+    background-color: black;
+    color: white;
+    font-size: 20px;
+    border: 1px solid white;
   }
 }
 .nav_bar {
   width: 60%;
   background-image: url(../assets/images/slider52x.jpg);
-  background-size: contain;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 </style>
