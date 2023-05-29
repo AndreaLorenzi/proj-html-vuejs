@@ -1,9 +1,7 @@
 <template>
-  <div class="text-center ">
-    <h1 class="text-primary"> ciao a tutti 
-
-    </h1>
-  </div>
+<AppHeader/>
+<AppMain/>
+<AppFooter/>
 </template>
 
 <script>
@@ -11,12 +9,18 @@ import AppHeader from './components/AppHeader.vue';
 import AppMain from './components/AppMain.vue';
 import AppFooter from './components/AppFooter.vue';
 
+
 export default {
+    data() {
+       return {
+          
+       }
+    },
  components:{
   AppHeader,
   AppMain,
   AppFooter,
- }
+ },
 }
 </script>
 
