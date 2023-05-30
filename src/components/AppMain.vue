@@ -80,7 +80,13 @@
             <div class="reviews-text">
               <h3>MEGGY STEWART</h3>
               <h2>NEW YORK TIMES</h2>
-              <i class="fas fa-star"></i>
+              <div class="d-flex">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
               <div class="line"></div>
               <p>
                 Pellentesque vitae viverra risus, sagittis. Venenatis ridiculus
@@ -95,7 +101,13 @@
           <div class="reviews-text-sinistro" style="margin-right: 2rem">
             <h3>MARY MAXEY</h3>
             <h2>THE GUARDIAN</h2>
-            <i class="fas fa-star"></i>
+            <div class="d-flex">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
             <div class="line"></div>
             <p>
               Pellentesque vitae viverra risus, sagittis. Venenatis ridiculus
@@ -106,7 +118,14 @@
           <div class="reviews-text-destro">
             <h3>PATRICK MONROE</h3>
             <h2>GLOBE AND MAIL</h2>
-            <i class="fas fa-star"></i>
+            <div class="d-flex">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+
             <div class="line"></div>
             <p>
               Pellentesque vitae viverra risus, sagittis. Venenatis ridiculus
@@ -122,7 +141,60 @@
       </div>
     </section>
     <!-- sezione 4 -->
-    <section></section>
+    <section>
+      <div class="small-container">
+        <!-- titolo sezione -->
+        <div class="section-title">
+          <h2><i> Latest News &amp; Promotions </i></h2>
+          <div class="spacing-line"></div>
+        </div>
+
+        <!-- box news x3 -->
+        <div class="news-container space-between d-flex">
+          <div class="news-card">
+            <img src="../assets/images/blog92x.jpg" alt="" />
+            <div class="overlay"></div>
+            <div class="news-card-text">
+              <i class="fas fa-link"></i>
+              <h2>THE BEST COFFEE IN TOWN</h2>
+              <p>News</p>
+            </div>
+            <div class="box-hide">
+              <h2 class="text-box">THE BEST COFFEE IN TOWN</h2>
+              <p>By admin | January 7th, 2020 | Categories: News</p>
+            </div>
+          </div>
+
+          <div class="news-card">
+            <img src="../assets/images/blog72x.jpg" alt="" />
+            <div class="overlay"></div>
+            <div class="news-card-text">
+              <i class="fas fa-link"></i>
+              <h2>DISCOVER OUR NEW MENU</h2>
+              <p>News</p>
+            </div>
+            <div class="box-hide">
+              <h2 class="text-box">DISCOVER OUR NEW MENU</h2>
+              <p>By admin | January 7th, 2020 | Categories: News</p>
+            </div>
+          </div>
+
+          <div class="news-card">
+            <img src="../assets/images/blog82x.jpg" alt="" />
+            <div class="overlay"></div>
+            <div class="news-card-text">
+              <i class="fas fa-link"></i>
+              <h2>WE NOW ACCEPT SQUARE!</h2>
+              <p>News</p>
+            </div>
+            <div class="box-hide">
+              <h2 class="text-box">WE NOW ACCEPT SQUARE!</h2>
+              <p>By admin | January 7th, 2020 | Categories: News</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <!-- sezione 5 -->
     <section></section>
     <!-- seziozne6 -->
@@ -170,6 +242,9 @@ export default {};
   text-align: center;
   padding-bottom: 2rem;
   padding-top: 2rem;
+}
+.fa-star {
+  color: white;
 }
 .reviews {
   width: 100%;
@@ -297,4 +372,101 @@ export default {};
   align-items: flex-end;
   color: white;
 }
+// section 4
+.section-title {
+  text-align: center;
+  margin-bottom: 60px;
+
+  h2 {
+    font-family: "Bebas Neue", cursive;
+    font-size: 30px;
+    line-height: 20px;
+    font-weight: 200;
+    margin-top: 2rem;
+  }
+}
+
+.news-container {
+  margin: auto;
+  color: transparent;
+  transition: all 1s;
+  .news-card {
+    margin: auto;
+    width: 27%;
+    height: 700px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    text-align: center;
+    img {
+      position: absolute;
+      top: 40%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      height: 800px;
+    }
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0.8) 0%,
+        rgba(255, 255, 255, 0) 0%
+      );
+      transition: all 0.5s;
+    }
+    .news-card-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 300px;
+      text-align: center;
+      h2 {
+        margin: 10px 0;
+        font-size: 40px;
+      }
+    }
+    .box-hide {
+      color: $first-color;
+      position: absolute;
+      bottom: 0;
+      height: 140px;
+      background-color: $second-color;
+      width: 100%;
+      overflow: hidden;
+      transition: height 0.5s;
+      .text-box {
+        font-size: 35px;
+        font-weight: 500;
+        margin: 20px 0 2px 0;
+      }
+      p {
+        font-size: 14px;
+      }
+    }
+    &:hover {
+      color: $second-color;
+      background-position: 50%;
+      background-repeat: no-repeat;
+      background-size: cover;
+      transition: all 1s;
+      &:hover .box-hide {
+        height: 0px;
+      }
+      &:hover .overlay {
+        background: linear-gradient(
+          180deg,
+          rgba(0, 0, 0, 0.8) 0%,
+          rgba(255, 255, 255, 0) 90%
+        );
+        transition: all 0.5s;
+      }
+    }
+  }
+}
+// section 5
 </style>
