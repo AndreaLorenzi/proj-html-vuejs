@@ -1,13 +1,9 @@
-<template>
-  
-</template>
+<template></template>
 
 <script>
-export default {
-
-}
+export default {};
 </script>
 
-<style>
-
+<style lang="scss">
+@import "../styles/_variables.scss";
 </style>
