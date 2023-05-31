@@ -217,10 +217,6 @@
         </div>
       </div>
     </section>
-    <!-- sezione 5 -->
-    <section></section>
-    <!-- seziozne6 -->
-    <section></section>
     <!-- sezione 7 -->
     <section>
       <div id="menu" class="menu-container justify-center">
@@ -271,7 +267,23 @@
       </div>
     </section>
     <!-- sezione 8 -->
-    <section></section>
+    <section>
+      <div class="conteiner-fluid poke">
+        <div class="colorer">
+          <div class="spazio_tr">
+            <div class="d-flex">
+              <h2>BRAISED ABALONE</h2>
+              <span>$52</span>
+            </div>
+            <p>
+              Pretium accumsan porttitor viverra leo gravida mollis imperdiet.
+              Fringilla nibh pharetra sociis leo amet.
+            </p>
+            <button class="black-button">VIEW IN THE MENU</button>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 </template>
 
@@ -417,6 +429,10 @@ export default {
 .spazio {
   width: 80%;
   padding: 6rem;
+}
+.spazio:hover {
+  transform: scale(1.2);
+  transition-duration: 1s;
 }
 .col-5 {
   background-color: $first-color;
@@ -745,6 +761,46 @@ export default {
   .spaziatura {
     width: 80%;
     margin: auto;
+  }
+}
+.poke {
+  margin-top: 2rem;
+  height: 800px;
+  background-image: url(../assets/images/hero42x.jpg);
+  background-size: cover;
+  position: relative;
+  .colorer {
+    position: absolute;
+    left: 10rem;
+    top: 13rem;
+    height: 450px;
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    background-color: $first-color;
+  }
+  h2 {
+    color: $second-color;
+  }
+  span {
+    color: $second-color;
+  }
+  p {
+    color: $third-color;
+  }
+  button {
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+    padding: 0.5rem;
+  }
+  button:hover {
+    background-color: white;
+    color: grey;
+  }
+  .spazio_tr {
+    width: 80%;
+    padding: 3rem;
   }
 }
 </style>
