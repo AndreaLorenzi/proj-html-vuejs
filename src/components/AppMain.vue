@@ -66,7 +66,25 @@
       </div>
     </section>
     <!-- sezione2 -->
-    <section></section>
+    <section>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-7 demo_img"></div>
+          <div class="col-5 d-flex flex-column box-black">
+            <div class="spazio">
+              <div class="line"><h3>FINE DINING EXPERIENCE</h3></div>
+              <h2>THE BEST TABLE IN TOWN</h2>
+              <p>
+                Pellentesque vitae viverra risus, sagittis. Venenatis ridiculus
+                scelerisque nisi in urna nulla. Sit tempor a et nisl, ac felis.
+              </p>
+
+              <button class="black-button">EXPLORE THE MENU</button>>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <!-- sezione3 -->
     <section>
       <h3 class="title-section-3">What critics are saying about us</h3>
@@ -209,10 +227,12 @@
         <!-- box menu Appetizer -->
 
         <div class="text-center horse">
-          <h2>HORSE D'OEUVRES</h2>
-          <div v-for="(plate, i) in horsdoeuvres" :key="i">
-            <div class="menu-item space-between">
-              <h3>{{ plate.plateName }}</h3>
+          <h2 class="py-2">HORSE D'OEUVRES</h2>
+          <div v-for="(plate, i) in horsdoeuvres" :key="i" class="spaziatura">
+            <div
+              class="menu-item space-between d-flex align-items-center justify-content-between"
+            >
+              <h3 class="py-4">{{ plate.plateName }}</h3>
               <span>{{ plate.price }}</span>
             </div>
             <p>{{ plate.text }}</p>
@@ -222,10 +242,12 @@
         <!-- box menu MainCourse -->
 
         <div class="text-center course">
-          <h2>MAIN COURSE</h2>
-          <div v-for="(plate, i) in mainCourseList" :key="i">
-            <div class="menu-item space-between">
-              <h3>{{ plate.plateName }}</h3>
+          <h2 class="py-2">MAIN COURSE</h2>
+          <div v-for="(plate, i) in mainCourseList" :key="i" class="spaziatura">
+            <div
+              class="menu-item space-between d-flex align-items-center justify-content-between"
+            >
+              <h3 class="py-4">{{ plate.plateName }}</h3>
               <span>{{ plate.price }}</span>
             </div>
             <p>{{ plate.text }}</p>
@@ -235,10 +257,12 @@
         <!-- box menu Dessert -->
 
         <div class="text-center dessert">
-          <h2>DESSERTS</h2>
-          <div v-for="(plate, i) in dessertList" :key="i">
-            <div class="menu-item space-between">
-              <h3>{{ plate.plateName }}</h3>
+          <h2 class="py-2">DESSERTS</h2>
+          <div v-for="(plate, i) in dessertList" :key="i" class="spaziatura">
+            <div
+              class="menu-item space-between d-flex align-items-center justify-content-between"
+            >
+              <h3 class="py-4">{{ plate.plateName }}</h3>
               <span>{{ plate.price }}</span>
             </div>
             <p>{{ plate.text }}</p>
@@ -247,7 +271,7 @@
       </div>
     </section>
     <!-- sezione 8 -->
-    <section style="margin-top: 2rem"></section>
+    <section></section>
   </main>
 </template>
 
@@ -354,7 +378,7 @@ export default {
 
 <style lang="scss" scoped>
 @import "../styles/_variables.scss";
-
+// section1
 .container {
   margin: auto;
   width: 90%;
@@ -382,6 +406,42 @@ export default {
     background-color: black;
     border: 1px solid white;
     color: white;
+  }
+}
+// section 2
+.demo_img {
+  background-image: url(../assets/images/slider32x.jpg);
+  background-size: cover;
+  height: 800px;
+}
+.spazio {
+  width: 80%;
+  padding: 6rem;
+}
+.col-5 {
+  background-color: $first-color;
+  h3 {
+    color: $third-color;
+    padding-bottom: 2rem;
+  }
+  h2 {
+    color: $second-color;
+    padding-bottom: 2rem;
+  }
+  p {
+    color: $third-color;
+    padding-bottom: 2rem;
+  }
+  button {
+    width: 40%;
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+    padding: 0.5rem;
+  }
+  button:hover {
+    background-color: white;
+    color: grey;
   }
 }
 // section 3
@@ -634,7 +694,8 @@ export default {
 // section 7
 .menu-container {
   display: flex;
-  padding: 120px 120px;
+  margin-top: 3rem;
+  margin-left: 14rem;
   .menu-box {
     color: $first-color;
     width: 33%;
@@ -643,12 +704,13 @@ export default {
     cursor: pointer;
     .text-center {
       width: 80%;
+      margin: auto;
       .menu-item {
         margin: 40px 0 10px 0;
       }
       h2 {
         font-size: 45px;
-        margin-top: 0;
+        margin-top: 20px;
       }
       h3 {
         font-size: 30px;
@@ -668,12 +730,21 @@ export default {
     height: 700px;
   }
   .course {
-    background-image: url(../assets/images/misc22x.jpg);
+    background: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0.9) 50%,
+        rgba(255, 255, 255, 0) 100%
+      ),
+      url(../assets/images/misc22x.jpg);
     background-size: cover;
     color: white;
     height: 700px;
     margin-top: -30px;
     opacity: 1;
+  }
+  .spaziatura {
+    width: 80%;
+    margin: auto;
   }
 }
 </style>
