@@ -204,14 +204,152 @@
     <!-- seziozne6 -->
     <section></section>
     <!-- sezione 7 -->
-    <section></section>
+    <section>
+      <div id="menu" class="menu-container justify-center">
+        <!-- box menu Appetizer -->
+
+        <div class="text-center horse">
+          <h2>HORSE D'OEUVRES</h2>
+          <div v-for="(plate, i) in horsdoeuvres" :key="i">
+            <div class="menu-item space-between">
+              <h3>{{ plate.plateName }}</h3>
+              <span>{{ plate.price }}</span>
+            </div>
+            <p>{{ plate.text }}</p>
+          </div>
+        </div>
+
+        <!-- box menu MainCourse -->
+
+        <div class="text-center course">
+          <h2>MAIN COURSE</h2>
+          <div v-for="(plate, i) in mainCourseList" :key="i">
+            <div class="menu-item space-between">
+              <h3>{{ plate.plateName }}</h3>
+              <span>{{ plate.price }}</span>
+            </div>
+            <p>{{ plate.text }}</p>
+          </div>
+        </div>
+
+        <!-- box menu Dessert -->
+
+        <div class="text-center dessert">
+          <h2>DESSERTS</h2>
+          <div v-for="(plate, i) in dessertList" :key="i">
+            <div class="menu-item space-between">
+              <h3>{{ plate.plateName }}</h3>
+              <span>{{ plate.price }}</span>
+            </div>
+            <p>{{ plate.text }}</p>
+          </div>
+        </div>
+      </div>
+    </section>
     <!-- sezione 8 -->
     <section style="margin-top: 2rem"></section>
   </main>
 </template>
 
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      horsdoeuvres: [
+        {
+          plateName: "AHI SALMON NIGIRI",
+          price: "$48",
+          text: "Mollis ornare sit sapien, sodales. Cursus duis proin semper quisque.",
+          description:
+            "Pellentesque vitae viverra risus, sagittis. Venenatis ridiculus scelerisque nisi in urna nulla. Sit tempor a et nisl, ac felis.",
+        },
+        {
+          plateName: "UMI MASU SALAD",
+          price: "$21",
+          text: "Mollis ornare sit sapien, sodales. Cursus duis proin semper quisque.",
+          description:
+            "Pellentesque vitae viverra risus, sagittis. Venenatis ridiculus scelerisque nisi in urna nulla. Sit tempor a et nisl, ac felis.",
+        },
+        {
+          plateName: "TEMAKI WITH CRAB",
+          price: "$32",
+          text: "Mollis ornare sit sapien, sodales. Cursus duis proin semper quisque.",
+          description:
+            "Pellentesque vitae viverra risus, sagittis. Venenatis ridiculus scelerisque nisi in urna nulla. Sit tempor a et nisl, ac felis.",
+        },
+        {
+          plateName: "CALIFORNIA ROLLS",
+          price: "$22",
+          text: "Mollis ornare sit sapien, sodales. Cursus duis proin semper quisque.",
+          description:
+            "Pellentesque vitae viverra risus, sagittis. Venenatis ridiculus scelerisque nisi in urna nulla. Sit tempor a et nisl, ac felis.",
+        },
+      ],
+
+      mainCourseList: [
+        {
+          plateName: "BRAISED ABALONE",
+          price: "$52",
+          text: "Mollis ornare sit sapien, sodales. Cursus duis proin semper quisque.",
+          description:
+            "Pellentesque vitae viverra risus, sagittis. Venenatis ridiculus scelerisque nisi in urna nulla. Sit tempor a et nisl, ac felis.",
+        },
+        {
+          plateName: "TWICE COOKED PORK",
+          price: "$21",
+          text: "Mollis ornare sit sapien, sodales. Cursus duis proin semper quisque.",
+          description:
+            "Pellentesque vitae viverra risus, sagittis. Venenatis ridiculus scelerisque nisi in urna nulla. Sit tempor a et nisl, ac felis.",
+        },
+        {
+          plateName: "KUNG PAO CHICKEN",
+          price: "$32",
+          text: "Mollis ornare sit sapien, sodales. Cursus duis proin semper quisque.",
+          description:
+            "Pellentesque vitae viverra risus, sagittis. Venenatis ridiculus scelerisque nisi in urna nulla. Sit tempor a et nisl, ac felis.",
+        },
+        {
+          plateName: "CHAR SIU & SUSHI",
+          price: "$48",
+          text: "Mollis ornare sit sapien, sodales. Cursus duis proin semper quisque.",
+          description:
+            "Pellentesque vitae viverra risus, sagittis. Venenatis ridiculus scelerisque nisi in urna nulla. Sit tempor a et nisl, ac felis.",
+        },
+      ],
+
+      dessertList: [
+        {
+          plateName: "CHOCOLATE BALL CAKE",
+          price: "$13",
+          text: "Mollis ornare sit sapien, sodales. Cursus duis proin semper quisque.",
+          description:
+            "Pellentesque vitae viverra risus, sagittis. Venenatis ridiculus scelerisque nisi in urna nulla. Sit tempor a et nisl, ac felis.",
+        },
+        {
+          plateName: "LIME PIE WITH CRUST",
+          price: "$14",
+          text: "Mollis ornare sit sapien, sodales. Cursus duis proin semper quisque.",
+          description:
+            "Pellentesque vitae viverra risus, sagittis. Venenatis ridiculus scelerisque nisi in urna nulla. Sit tempor a et nisl, ac felis.",
+        },
+        {
+          plateName: "RASPBERRY PEAR CAKE",
+          price: "$18",
+          text: "Mollis ornare sit sapien, sodales. Cursus duis proin semper quisque.",
+          description:
+            "Pellentesque vitae viverra risus, sagittis. Venenatis ridiculus scelerisque nisi in urna nulla. Sit tempor a et nisl, ac felis.",
+        },
+        {
+          plateName: "CAFÉ AU LAIT",
+          price: "$6",
+          text: "Mollis ornare sit sapien, sodales. Cursus duis proin semper quisque.",
+          description:
+            "Pellentesque vitae viverra risus, sagittis. Venenatis ridiculus scelerisque nisi in urna nulla. Sit tempor a et nisl, ac felis.",
+        },
+      ],
+    };
+  },
+};
 </script>
 
 <style lang="scss" scoped>
@@ -255,6 +393,7 @@ export default {};
 .fa-star {
   color: white;
 }
+
 .reviews {
   width: 100%;
 
@@ -492,5 +631,49 @@ export default {};
     }
   }
 }
-// section 5
+// section 7
+.menu-container {
+  display: flex;
+  padding: 120px 120px;
+  .menu-box {
+    color: $first-color;
+    width: 33%;
+    padding: 80px 0;
+    background-color: #e8e8e8;
+    cursor: pointer;
+    .text-center {
+      width: 80%;
+      .menu-item {
+        margin: 40px 0 10px 0;
+      }
+      h2 {
+        font-size: 45px;
+        margin-top: 0;
+      }
+      h3 {
+        font-size: 30px;
+        display: inline;
+      }
+      span {
+        font-family: "Bebas Neue", cursive;
+      }
+    }
+  }
+  .horse {
+    background-color: $third-color;
+    height: 700px;
+  }
+  .dessert {
+    background-color: $third-color;
+    height: 700px;
+  }
+  .course {
+    background-image: url(../assets/images/misc22x.jpg);
+    background-size: cover;
+    color: white;
+    height: 700px;
+    margin-top: -30px;
+    opacity: 1;
+  }
+}
 </style>
