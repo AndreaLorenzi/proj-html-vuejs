@@ -202,7 +202,7 @@
     <!-- sezione 7 -->
     <section></section>
     <!-- sezione 8 -->
-    <section></section>
+    <section style="margin-top: 2rem"></section>
   </main>
 </template>
 

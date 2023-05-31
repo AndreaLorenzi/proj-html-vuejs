@@ -20,9 +20,13 @@
       <div class="nav_bar">
         <nav>
           <ul class="d-flex">
-            <li v-for="item in menuItems" :key="item">{{ item.title }}</li>
+            <li v-for="item in menuItems" :key="item">
+              <a href="http://">{{ item.title }}</a>
+            </li>
             <li>
-              <i class="fa-solid fa-cart-shopping" style="color: #ffffff"></i>
+              <a href="http://"
+                ><i class="fa-solid fa-cart-shopping" style="color: #ffffff"></i
+              ></a>
             </li>
           </ul>
         </nav>
@@ -75,6 +79,10 @@ export default {
     list-style: none;
     li {
       color: white;
+    }
+    a {
+      color: white;
+      text-decoration: none;
     }
   }
 }
