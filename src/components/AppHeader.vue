@@ -110,6 +110,10 @@ export default {
     font-size: 20px;
     border: 1px solid white;
   }
+  button:hover {
+    background-color: white;
+    color: black;
+  }
 }
 .nav_bar {
   width: 60%;

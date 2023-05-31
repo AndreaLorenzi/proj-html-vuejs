@@ -99,39 +99,43 @@
         </div>
         <div class="big-sotto" style="padding-top: 2rem">
           <div class="reviews-text-sinistro" style="margin-right: 2rem">
-            <h3>MARY MAXEY</h3>
-            <h2>THE GUARDIAN</h2>
-            <div class="d-flex">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
+            <div style="padding: 4rem">
+              <h3>MARY MAXEY</h3>
+              <h2>THE GUARDIAN</h2>
+              <div class="d-flex">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <div class="line"></div>
+              <p>
+                Pellentesque vitae viverra risus, sagittis. Venenatis ridiculus
+                scelerisque nisi in urna nulla. Sit tempor a et nisl, ac felis.
+              </p>
+              <button class="transp-button">READ FULL ARTICLE</button>
             </div>
-            <div class="line"></div>
-            <p>
-              Pellentesque vitae viverra risus, sagittis. Venenatis ridiculus
-              scelerisque nisi in urna nulla. Sit tempor a et nisl, ac felis.
-            </p>
-            <button class="transp-button">READ FULL ARTICLE</button>
           </div>
           <div class="reviews-text-destro">
-            <h3>PATRICK MONROE</h3>
-            <h2>GLOBE AND MAIL</h2>
-            <div class="d-flex">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-            </div>
+            <div style="padding: 4rem">
+              <h3>PATRICK MONROE</h3>
+              <h2>GLOBE AND MAIL</h2>
+              <div class="d-flex">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
 
-            <div class="line"></div>
-            <p>
-              Pellentesque vitae viverra risus, sagittis. Venenatis ridiculus
-              scelerisque nisi in urna nulla. Sit tempor a et nisl, ac felis.
-            </p>
-            <button class="transp-button">READ FULL ARTICLE</button>
+              <div class="line"></div>
+              <p>
+                Pellentesque vitae viverra risus, sagittis. Venenatis ridiculus
+                scelerisque nisi in urna nulla. Sit tempor a et nisl, ac felis.
+              </p>
+              <button class="transp-button">READ FULL ARTICLE</button>
+            </div>
           </div>
         </div>
       </div>
@@ -288,10 +292,14 @@ export default {};
       }
       button {
         width: 35%;
-        background-color: $first-color;
+        background-color: transparent;
         color: white;
         border: 1px solid white;
         padding: 1rem;
+      }
+      button:hover {
+        background-color: white;
+        color: grey;
       }
     }
   }
@@ -304,8 +312,10 @@ export default {};
       display: flex;
       flex-direction: column;
       width: 80%;
-      background-color: $first-color;
-      height: 500px;
+      background-image: url(../assets/images/info52x.jpg);
+      background-size: cover;
+
+      height: 550px;
 
       h3 {
         color: $third-color;
@@ -323,10 +333,14 @@ export default {};
       }
       button {
         width: 35%;
-        background-color: $first-color;
+        background-color: transparent;
         color: white;
         border: 1px solid white;
         padding: 1rem;
+      }
+      button:hover {
+        background-color: white;
+        color: grey;
       }
     }
     .reviews-text-destro {
@@ -334,8 +348,9 @@ export default {};
       display: flex;
       flex-direction: column;
       width: 80%;
-      background-color: $first-color;
-      height: 500px;
+      background-image: url(../assets/images/info12x.jpg);
+      background-size: cover;
+      height: 550px;
 
       h3 {
         color: $third-color;
@@ -353,10 +368,14 @@ export default {};
       }
       button {
         width: 35%;
-        background-color: $first-color;
+        background-color: transparent;
         color: white;
         border: 1px solid white;
         padding: 1rem;
+      }
+      button:hover {
+        background-color: white;
+        color: grey;
       }
     }
   }
