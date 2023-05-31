@@ -240,6 +240,11 @@ export default {};
   flex-direction: column;
   align-items: center;
   padding: 2rem;
+  button:hover {
+    background-color: black;
+    border: 1px solid white;
+    color: white;
+  }
 }
 // section 3
 .title-section-3 {
